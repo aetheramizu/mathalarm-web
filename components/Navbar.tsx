@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 const links = [
   { label: "Problem", href: "#problem" },
   { label: "How It Works", href: "#how-it-works" },
+  { label: "App Flow", href: "#app-flow" },
 ];
 
 export default function Navbar() {
@@ -36,7 +37,7 @@ export default function Navbar() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-9 font-mono text-sm text-ink-muted md:flex">
+        <nav className="hidden items-center gap-8 font-mono text-sm text-ink-muted md:flex">
           {links.map((link) => (
             <a
               key={link.href}
