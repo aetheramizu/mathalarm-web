@@ -7,7 +7,7 @@ export default function Footer() {
             Math<span className="text-gradient-brand">Alarm</span>
           </span>
           <span aria-hidden className="h-3 w-px bg-line-bright" />
-          <span>&copy; {new Date().getFullYear()}</span>
+          <span>&copy; {new Date().getFullYear()} Alief</span>
         </div>
         <span>Android · Built with Expo &amp; React Native</span>
       </div>
