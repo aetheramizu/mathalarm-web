@@ -12,7 +12,16 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
 });
 
+/* Absolute base for the OG image URL. Vercel supplies its own production
+   host; set NEXT_PUBLIC_SITE_URL to override with a custom domain. */
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3000");
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "MathAlarm — Wake up. Think first.",
   description:
     "An alarm that makes you solve a math challenge before you can dismiss it. Android, built with Expo & React Native.",

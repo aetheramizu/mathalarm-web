@@ -6,20 +6,19 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 export const alt = "MathAlarm — Wake up. Think first.";
 
-const asset = (...parts: string[]) =>
-  readFileSync(join(process.cwd(), ...parts));
-
-/* The app's own typefaces, so the share card matches the product. */
-const geistBold = asset("assets", "fonts", "Geist_700Bold.ttf");
-const mono = asset("assets", "fonts", "JetBrainsMono_500Medium.ttf");
-const glyph = `data:image/png;base64,${asset(
-  "public",
-  "mathalarm-glyph.png",
+/* Each path is a single literal so Turbopack can scope the file trace; a
+   variadic helper here makes it trace the whole project into the bundle. */
+const geistBold = readFileSync(
+  join(process.cwd(), "assets/fonts/Geist_700Bold.ttf"),
+);
+const mono = readFileSync(
+  join(process.cwd(), "assets/fonts/JetBrainsMono_500Medium.ttf"),
+);
+const glyph = `data:image/png;base64,${readFileSync(
+  join(process.cwd(), "public/mathalarm-glyph.png"),
 ).toString("base64")}`;
-const screen = `data:image/png;base64,${asset(
-  "public",
-  "screens",
-  "wake-solving.png",
+const screen = `data:image/png;base64,${readFileSync(
+  join(process.cwd(), "public/screens/wake-solving.png"),
 ).toString("base64")}`;
 
 export default function OpengraphImage() {
