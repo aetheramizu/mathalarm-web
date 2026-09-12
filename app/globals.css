@@ -69,15 +69,3 @@ body {
   background-clip: text;
   color: transparent;
 }
-
-/* Empty asset placeholders: designed, not broken. */
-.placeholder-field {
-  background-color: var(--color-subtle);
-  background-image: repeating-linear-gradient(
-    -45deg,
-    rgba(255, 255, 255, 0.022) 0px,
-    rgba(255, 255, 255, 0.022) 1px,
-    transparent 1px,
-    transparent 9px
-  );
-}
