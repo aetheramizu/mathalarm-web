@@ -11,7 +11,7 @@ export default function Hero() {
         <div className="grid items-center gap-14 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-7">
             <div className="flex items-center gap-4">
-              <span className="font-mono text-xs font-semibold tracking-[0.28em] text-pink">
+              <span className="font-mono text-xs font-semibold tracking-[0.28em] text-pink-text">
                 MATHALARM
               </span>
               <span aria-hidden className="h-px w-12 bg-line-bright" />

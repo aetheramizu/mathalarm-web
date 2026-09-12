@@ -52,7 +52,7 @@ export default function HowItWorks() {
               <div className="flex items-baseline gap-3 font-mono text-xs tracking-[0.2em] uppercase">
                 <span
                   className={
-                    step.accent ? "font-semibold text-cyan" : "font-semibold text-pink"
+                    step.accent ? "font-semibold text-cyan" : "font-semibold text-pink-text"
                   }
                 >
                   {step.number}

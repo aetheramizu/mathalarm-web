@@ -111,7 +111,7 @@ export default function AppFlow() {
                     className={
                       stage.accent
                         ? "font-semibold text-cyan"
-                        : "font-semibold text-pink"
+                        : "font-semibold text-pink-text"
                     }
                   >
                     {stage.number}
@@ -137,7 +137,7 @@ export default function AppFlow() {
                   <span className="text-xl font-semibold tracking-[-0.02em] text-white">
                     {difficulty.level}
                   </span>
-                  <span className="font-mono text-xs text-pink">
+                  <span className="font-mono text-xs text-pink-text">
                     {difficulty.problems}
                   </span>
                 </dt>

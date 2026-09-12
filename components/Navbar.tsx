@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 
 const links = [
@@ -25,13 +26,14 @@ export default function Navbar() {
           href="#top"
           className="flex items-center gap-3 font-mono text-base font-semibold tracking-tight text-white"
         >
-          {/* Logo placeholder — replace the inner span with the real mark. */}
-          <span
-            aria-hidden
-            className="flex size-8 items-center justify-center rounded-lg border border-line-bright bg-elevated text-[11px] font-bold text-pink"
-          >
-            M
-          </span>
+          <Image
+            src="/mathalarm-icon.png"
+            alt=""
+            width={32}
+            height={32}
+            priority
+            className="size-8 rounded-lg"
+          />
           <span>
             Math<span className="text-pink">Alarm</span>
           </span>
