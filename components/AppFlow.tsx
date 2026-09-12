@@ -28,7 +28,7 @@ const stages = [
   {
     number: "06",
     state: "Recorded",
-    body: "The session is written to the local database: when it fired, how it ended, right and wrong answers, and how long solving took.",
+    body: "The session is written to the local database: when it fired, how it ended, right and wrong answers, and how long solving took. On the first solved morning alarm of the day, a mood check-in is offered and saved alongside it, which is what Analytics reads back.",
   },
 ];
 

@@ -4,25 +4,29 @@ const steps = [
     label: "Set alarm",
     title: "Set your alarm",
     body: "Choose when you want to wake up and configure the alarm.",
+    caption: "ALARMS",
   },
   {
     number: "02",
     label: "Alert",
     title: "The alarm rings",
     body: "When it is time, MathAlarm wakes you with an alarm.",
+    caption: "ALARM RINGING",
   },
   {
     number: "03",
     label: "Challenge",
     title: "Solve the challenge",
     body: "Answer the math problem shown on screen.",
+    caption: "MATH CHALLENGE",
     accent: true,
   },
   {
     number: "04",
     label: "Awake",
     title: "Start your day",
-    body: "Solve it correctly and complete the alarm.",
+    body: "Solve it correctly, log a quick morning mood check-in, and start your day.",
+    caption: "MORNING CHECK-IN",
   },
 ];
 
@@ -64,7 +68,7 @@ export default function HowItWorks() {
               </p>
 
               <div className="mt-8 lg:mt-auto lg:pt-8">
-                <StepScreen caption={`SCREEN ${step.number}`} />
+                <StepScreen caption={step.caption} />
               </div>
             </li>
           ))}
