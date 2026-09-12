@@ -1,24 +1,29 @@
+import Image from "next/image";
+
 const steps = [
   {
     number: "01",
     label: "Set alarm",
     title: "Set your alarm",
     body: "Choose when you want to wake up and configure the alarm.",
-    caption: "ALARMS",
+    image: "/screens/alarms.png",
+    alt: "The MathAlarm alarm list, with the next alarm at 6:07 AM counting down and three saved alarms below it",
   },
   {
     number: "02",
     label: "Alert",
     title: "The alarm rings",
     body: "When it is time, MathAlarm wakes you with an alarm.",
-    caption: "ALARM RINGING",
+    image: "/screens/alarm-ringing.png",
+    alt: "The wake screen as the alarm rings, showing problem 1 of 3 and an empty answer field",
   },
   {
     number: "03",
     label: "Challenge",
     title: "Solve the challenge",
     body: "Answer the math problem shown on screen.",
-    caption: "MATH CHALLENGE",
+    image: "/screens/math-challenge.png",
+    alt: "The wake screen on problem 3 of 3, with 13 + 29 answered as 42",
     accent: true,
   },
   {
@@ -26,7 +31,8 @@ const steps = [
     label: "Awake",
     title: "Start your day",
     body: "Solve it correctly, log a quick morning mood check-in, and start your day.",
-    caption: "MORNING CHECK-IN",
+    image: "/screens/morning-checkin.png",
+    alt: "The morning check-in screen asking for your mood, with Excited selected",
   },
 ];
 
@@ -68,7 +74,7 @@ export default function HowItWorks() {
               </p>
 
               <div className="mt-8 lg:mt-auto lg:pt-8">
-                <StepScreen caption={step.caption} />
+                <StepScreen src={step.image} alt={step.alt} />
               </div>
             </li>
           ))}
@@ -85,15 +91,18 @@ export default function HowItWorks() {
   );
 }
 
-/* Walkthrough screen placeholder. Same 9:19.5 ratio as the app — swap the
-   contents for a real screenshot without touching the surrounding layout. */
-function StepScreen({ caption }: { caption: string }) {
+/* One walkthrough screen, in the same 9:19.5 frame as the hero device. */
+function StepScreen({ src, alt }: { src: string; alt: string }) {
   return (
     <div className="mx-auto w-full max-w-[200px] rounded-[1.75rem] border border-line-bright bg-elevated p-1.5 sm:max-w-[220px]">
-      <div className="placeholder-field relative flex aspect-[9/19.5] items-end justify-center overflow-hidden rounded-[1.35rem] border border-line pb-5">
-        <span className="font-mono text-[10px] tracking-[0.22em] text-ink-faint">
-          {caption}
-        </span>
+      <div className="relative aspect-[9/19.5] overflow-hidden rounded-[1.35rem] border border-line bg-base">
+        <Image
+          src={src}
+          alt={alt}
+          fill
+          sizes="(max-width: 640px) 200px, 220px"
+          className="object-cover"
+        />
       </div>
     </div>
   );

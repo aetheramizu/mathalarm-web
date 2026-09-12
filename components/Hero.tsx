@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="relative overflow-hidden border-b border-line pt-28 pb-20 sm:pt-36 md:pt-44 md:pb-28">
@@ -76,9 +78,7 @@ export default function Hero() {
   );
 }
 
-/* Hero device. The screen is an intentional placeholder — drop the real
-   screenshot in where the label sits, same aspect ratio, nothing else moves.
-   The two offset outlines behind it echo the app's math lock ring. */
+/* Hero device. The two offset outlines behind it echo the app's math lock ring. */
 function PhoneFrame() {
   return (
     <div className="flex justify-center">
@@ -94,15 +94,15 @@ function PhoneFrame() {
         />
 
         <div className="relative rounded-[2.75rem] border border-line-bright bg-gradient-to-b from-[#242436] via-[#151522] to-[#0c0c14] p-2.5 shadow-[0_30px_70px_-20px_rgba(0,0,0,0.9)] transition-transform duration-500 group-hover:-translate-y-1">
-          <div className="placeholder-field relative aspect-[9/19.5] overflow-hidden rounded-[2.1rem] border border-line">
-            {/* Camera cutout */}
-            <span
-              aria-hidden
-              className="absolute left-1/2 top-3 h-1.5 w-14 -translate-x-1/2 rounded-full bg-black/70"
+          <div className="relative aspect-[9/19.5] overflow-hidden rounded-[2.1rem] border border-line bg-base">
+            <Image
+              src="/screens/wake-solving.png"
+              alt="The MathAlarm wake screen on problem 4 of 5, showing the equation 9x − 69 = 3 with x = 8 entered above the keypad"
+              fill
+              priority
+              sizes="(max-width: 640px) 248px, (max-width: 1024px) 288px, 310px"
+              className="object-cover"
             />
-            <span className="absolute inset-x-0 bottom-6 text-center font-mono text-[10px] tracking-[0.22em] text-ink-faint">
-              APP SCREEN
-            </span>
           </div>
 
           {/* Side buttons */}
