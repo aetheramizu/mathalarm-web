@@ -57,9 +57,14 @@ export default function Hero() {
               </a>
             </div>
 
-            <p className="mt-9 font-mono text-xs tracking-wide text-ink-faint">
-              Android · Built with Expo &amp; React Native
-            </p>
+            <div className="mt-9 flex items-center gap-2.5 font-mono text-xs tracking-wide text-ink-faint">
+              <span className="flex items-center gap-1.5">
+                <AndroidIcon />
+                Android
+              </span>
+              <span aria-hidden>·</span>
+              <span>Built with Expo &amp; React Native</span>
+            </div>
           </div>
 
           <div className="pt-6 sm:pt-4 lg:col-span-5 lg:pt-0">
@@ -112,5 +117,13 @@ function PhoneFrame() {
         </div>
       </div>
     </div>
+  );
+}
+
+function AndroidIcon() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden className="size-4 text-cyan" fill="currentColor">
+      <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-1.0003 0-.5517.4482-1.0003.9993-1.0003.5517 0 1.0003.4486 1.0003 1.0003 0 .5517-.4486 1.0003-1.0003 1.0003m-11.046 0c-.5511 0-.9993-.4486-.9993-1.0003 0-.5517.4482-1.0003.9993-1.0003.5517 0 1.0003.4486 1.0003 1.0003 0 .5517-.4486 1.0003-1.0003 1.0003m11.4045-6.02l1.997-3.4587c.0975-.169.0396-.3859-.1294-.4834-.169-.0975-.3859-.0396-.4834.1294l-2.0234 3.5044c-1.423-.652-3.0336-1.025-4.7423-1.025s-3.3193.373-4.7423 1.025L5.7577 5.5131c-.0975-.169-.3144-.2269-.4834-.1294-.169.0975-.2269.3144-.1294.4834l1.997 3.4587C3.593 11.233 1.25 15.176 1.25 19.75h21.5c0-4.574-2.343-8.517-5.8725-10.4286" />
+    </svg>
   );
 }
