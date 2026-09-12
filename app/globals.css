@@ -45,6 +45,31 @@ body {
   }
 }
 
+/* The gradient that carries every primary action in the app
+   (PrimaryGradient in src/design/tokens.ts). */
+.bg-gradient-primary {
+  background-image: linear-gradient(
+    135deg,
+    var(--color-peach) 0%,
+    var(--color-pink) 52%,
+    #7b2cbf 100%
+  );
+}
+
+/* Display accents, echoing the app icon. The midpoint is lifted off the app's
+   #7b2cbf, which is too dark to read as text on the void background. */
+.text-gradient-brand {
+  background-image: linear-gradient(
+    110deg,
+    var(--color-pink) 0%,
+    #b13bd4 46%,
+    var(--color-cyan) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
 /* Empty asset placeholders: designed, not broken. */
 .placeholder-field {
   background-color: var(--color-subtle);

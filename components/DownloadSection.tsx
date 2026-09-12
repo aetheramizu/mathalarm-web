@@ -21,7 +21,7 @@ export default function DownloadSection() {
             <div className="mt-9">
               <a
                 href="#download"
-                className="inline-flex w-full items-center justify-center gap-2.5 rounded-lg bg-pink px-7 py-4 text-sm font-semibold text-white transition-colors hover:bg-pink-deep sm:w-auto"
+                className="bg-gradient-primary inline-flex w-full items-center justify-center gap-2.5 rounded-lg px-7 py-4 text-sm font-semibold text-white transition-[filter] hover:brightness-110 sm:w-auto"
               >
                 <svg viewBox="0 0 24 24" aria-hidden className="size-4" fill="currentColor">
                   <path d="M12 3v11.2l3.6-3.6 1.4 1.4L12 17l-5-5 1.4-1.4L12 14.2V3h0zM5 19h14v2H5z" />

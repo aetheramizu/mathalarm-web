@@ -77,7 +77,7 @@ export default function HowItWorks() {
         <div className="mt-20 border-t border-line pt-14 text-center md:mt-28">
           <p className="text-[clamp(1.75rem,5vw,3rem)] font-semibold tracking-[-0.03em] text-white">
             Hear it. Solve it.{" "}
-            <span className="text-pink">Wake up.</span>
+            <span className="text-gradient-brand">Wake up.</span>
           </p>
         </div>
       </div>

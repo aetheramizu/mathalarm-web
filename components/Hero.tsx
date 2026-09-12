@@ -20,7 +20,7 @@ export default function Hero() {
             <h1 className="mt-7 text-[clamp(2.75rem,9vw,5.25rem)] font-semibold leading-[0.95] tracking-[-0.04em] text-white">
               Wake up.
               <br />
-              <span className="text-pink">Think first.</span>
+              <span className="text-gradient-brand">Think first.</span>
             </h1>
 
             <p className="mt-7 max-w-md text-lg leading-relaxed text-ink-muted sm:text-xl">
@@ -31,7 +31,7 @@ export default function Hero() {
             <div className="mt-10 flex flex-wrap items-center gap-3 sm:gap-4">
               <a
                 href="#download"
-                className="group inline-flex items-center gap-2.5 rounded-lg bg-pink px-6 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-pink-deep"
+                className="bg-gradient-primary group inline-flex items-center gap-2.5 rounded-lg px-6 py-3.5 text-sm font-semibold text-white transition-[filter] hover:brightness-110"
               >
                 Download &amp; Try
                 <svg

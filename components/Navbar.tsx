@@ -26,16 +26,21 @@ export default function Navbar() {
           href="#top"
           className="flex items-center gap-3 font-mono text-base font-semibold tracking-tight text-white"
         >
-          <Image
-            src="/mathalarm-icon.png"
-            alt=""
-            width={32}
-            height={32}
-            priority
-            className="size-8 rounded-lg"
-          />
+          <span
+            aria-hidden
+            className="relative flex size-8 shrink-0 overflow-hidden rounded-[9px] bg-[linear-gradient(135deg,#ff2e93_0%,#7b2cbf_55%,#00f0ff_100%)]"
+          >
+            <Image
+              src="/mathalarm-glyph.png"
+              alt=""
+              width={66}
+              height={66}
+              priority
+              className="absolute top-1/2 left-1/2 max-w-none -translate-x-1/2 -translate-y-1/2"
+            />
+          </span>
           <span>
-            Math<span className="text-pink">Alarm</span>
+            Math<span className="text-gradient-brand">Alarm</span>
           </span>
         </a>
 
@@ -54,7 +59,7 @@ export default function Navbar() {
         <div className="flex items-center gap-2">
           <a
             href="#download"
-            className="rounded-lg bg-pink px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-pink-deep sm:text-sm"
+            className="bg-gradient-primary rounded-lg px-4 py-2 text-xs font-semibold text-white transition-[filter] hover:brightness-110 sm:text-sm"
           >
             Download &amp; Try
           </a>
